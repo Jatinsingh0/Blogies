@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import styles from "./navbar.module.css"
 
-
 const links = [
     {
         id:1,
