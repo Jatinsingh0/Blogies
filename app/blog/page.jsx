@@ -11,7 +11,7 @@ const getData = async() =>{
     throw new Error("Failed to fetched data");
   }
    return res.json();
-}
+} 
 
 const Blog = async() => {
   const data = await getData();
@@ -19,7 +19,7 @@ const Blog = async() => {
     <div className={styles.mainContainer}>
       {
         data.map((item)=>(
-        <Link href="/blog/blogid" className={styles.container} key={item.id}>
+        <Link href={`/blog/${item.id}`} className={styles.container} key={item.id}>
           <div className={styles.imageContainer}>
             <Image
               src=""
