@@ -3,6 +3,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./dashboard.module.css";
 import useSWR from "swr";
 
+export const metadata = {
+  title: 'Dashboard ',
+  description: 'This is a Dashboard page',
+}
+
 const Dashboard = () => {
   //  FETCH DATA USING useEffect Method
   // const[data, setData] = useState([]);

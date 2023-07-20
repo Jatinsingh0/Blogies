@@ -4,6 +4,11 @@ import styles from "./about.module.css"
 import Button from '../components/button/button'
 
 
+export const metadata = {
+  title: 'About',
+  description: 'This is a About page',
+}
+
 const About = () => {
   return (
     <div className={styles.container}>

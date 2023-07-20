@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'next/image';
 import styles from "./blogPost.module.css"
 
-const getData = async(id) =>{
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {cache: "no-store" });
+const getData = async (id) =>{
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {cache: "no-store" });
   return res.json();
 }
 const BlogPost = async ({params}) => {
@@ -14,11 +14,11 @@ const BlogPost = async ({params}) => {
       <div className={styles.info}>
         <h1 className={styles.title}>{data.title}</h1>
         <p className={styles.desc}>
-          {data.body}
+          {data.content}
         </p>
         <div className={styles.author}>
           <Image
-            src={data.img}
+            src={data.image}
             alt=""
             width={40}
             height={40}
@@ -29,7 +29,7 @@ const BlogPost = async ({params}) => {
       </div>
       <div className={styles.imageContainer}>
         <Image
-          src={data.img}
+          src={data.image}
           alt=""
           fill={true}
           className={styles.image}

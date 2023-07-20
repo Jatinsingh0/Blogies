@@ -4,8 +4,8 @@ import Image from "next/image";
 import Button from "../components/button/button";
 
 export const metadata = {
-  title: "BLOGIES Contact Information",
-  description: " Contact Page",
+  title: "Contact Information",
+  description: " it's aContact Page",
 };
 
 const Contact = () => {

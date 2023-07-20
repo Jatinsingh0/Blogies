@@ -4,6 +4,7 @@ const nextConfig = {
         domains: ["images.pexels.com",
         "educationinprogress.eu",
         "inspirationfeed.com",
+        "ik.imagekit.io"
 
       ],
       },
