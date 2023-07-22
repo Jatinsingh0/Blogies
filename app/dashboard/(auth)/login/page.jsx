@@ -1,8 +1,11 @@
+"use client"
+
+import { signIn } from 'next-auth/react'
 import React from 'react'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <div onClick={()=>signIn("google")}>Login</div>
   )
 }
 
