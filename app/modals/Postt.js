@@ -1,3 +1,4 @@
+
 import mongoose from "mongoose";
 
 const postSchema = new mongoose.Schema({
@@ -12,7 +13,7 @@ const postSchema = new mongoose.Schema({
     image: {
         type: String,
         required: true,
-    },
+    }, 
     content: {
         type: String,
         required: true,

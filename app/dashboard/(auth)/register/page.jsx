@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const Register = () => {
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
 
   const router = useRouter();
 
@@ -31,7 +31,7 @@ const Register = () => {
       });
       res.status === 201 && router.push("/dashboard/login?success=Account has been created");
     } catch (err) {
-      setError(err);
+      setError(true);
       console.log(err);
     }
   };
@@ -60,8 +60,9 @@ const Register = () => {
           className={styles.input}
         />
         <button className={styles.button}>Register</button>
-        {error && "Something went wrong!"}
       </form>
+
+      {error && "Something went wrong!"}
       <span className={styles.or}>- OR -</span>
       <Link className={styles.link} href="/dashboard/login">
         Login with an existing account

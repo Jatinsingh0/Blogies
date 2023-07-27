@@ -8,14 +8,9 @@ export const metadata = {
   description: 'This is a Blog page',
 }
 
-const getData = async() =>{
-  console.log("fetching")
+const getData = async () =>{
   const res = await fetch("http://localhost:3000/api/posts", {cache: "no-store" });
   
-
-  if(!res.ok){
-    // throw new Error("Failed to fetched data");
-  }
    return res.json();
 } 
 
