@@ -11,13 +11,11 @@ const userSchema = new mongoose.Schema({
         unique: true,
         required: true,
     },
-    password: { // Fixed typo: "passward" to "password"
+    password: { 
         type: String,
         required: true,
     },
 
 }, { timestamps: true });
 
-const User = mongoose.models.User || mongoose.model("User", userSchema);
-
-export default User;
+export default mongoose.model("User", userSchema);

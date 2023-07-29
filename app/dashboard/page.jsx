@@ -2,7 +2,7 @@
 // import React, { useEffect, useState } from "react";
 import styles from "./dashboard.module.css";
 import useSWR from "swr";
-import { useSession, signIn } from "next-auth/react";
+import { useSession} from "next-auth/react";
 
 
 const Dashboard = () => {

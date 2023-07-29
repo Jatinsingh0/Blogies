@@ -1,16 +1,16 @@
 import User from "@/app/modals/User";
-import connect from "@/app/utils/db";
+import connectDB from "@/app/utils/db";
 import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 
 export const POST = async (request) => {
   const { name, email, password } = await request.json();
 
-  await connect();
+  await connectDB();
  
   const hashedPassword = await bcrypt.hash(password, 5);
 
-  const newUser = new User({
+  const newUser = User({
     name,
     email,
     password: hashedPassword,
