@@ -26,13 +26,13 @@ const handler = NextAuth({
             if (checkPassword) {
               return user;
             } else {
-              // throw new Error("Wrong Password!");
+              throw new Error("Wrong Password!");
             }
           } else {
-            // throw new Error("User not found!");
+            throw new Error("User not found!");
           }
         } catch (error) {
-          // throw new Error(err);
+          throw new Error(err);
         }
       },
     }),
