@@ -4,7 +4,6 @@ import styles from "./dashboard.module.css";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import axios from "axios";
 
 const Dashboard = () => {
   //  FETCH DATA USING useEffect Method
@@ -49,12 +48,15 @@ const Dashboard = () => {
    const content = e.target[3].value;
 
    try{
-     await axios.post("/api/posts", {
+     await fetch("/api/posts", {
+      method: "POST",
+      body: JSON.stringify({
       title,
       des,
       image,
       content,
       username: session.data.user.name,
+      }),
      });
      mutate();
      e.target.reset();

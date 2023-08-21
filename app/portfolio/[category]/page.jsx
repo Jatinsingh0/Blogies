@@ -7,7 +7,7 @@ import { items } from './data'
 
 const getData = (cat) => {
   const data = items[cat]
-  return data || []; // Return an empty array if data is undefined or falsy
+  return data || []; // Return an empty array if data is undefined or false
 };
 
 const Category = ({params}) => {

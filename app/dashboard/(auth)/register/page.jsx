@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import axios from "axios";
 import styles from "./register.module.css"
 import Link from "next/link";
 
@@ -17,10 +16,16 @@ const Register = () => {
     const password = e.target[2].value;
   
     try {
-      const response = await axios.post("/api/auth/register", {
-        name,
-        email,
-        password,
+      const response = await fetch("/api/auth/register", {
+         method: "POST",
+         headers: {
+          "content-type": "application/json",
+         },
+         body: JSON.stringify({
+          name,
+          email,
+          password,
+         }),
       });
   
       if (response.status === 201) {

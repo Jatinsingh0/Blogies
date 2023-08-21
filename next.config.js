@@ -4,8 +4,8 @@ const nextConfig = {
         domains: ["images.pexels.com",
         "educationinprogress.eu",
         "inspirationfeed.com",
-        "ik.imagekit.io"
-
+        "ik.imagekit.io",
+        "encrypted-tbn0.gstatic.com"
       ],
       },
 }
