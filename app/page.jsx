@@ -12,9 +12,9 @@ export default function Home() {
           global tech industry.</p>
         <Button title="See Our Works" url="/portfolio"/>
       </div>
-      <div className={styles.item}>
+      {/* <div className={styles.item}>
       <Image src="" alt='' width={500} height={500}/>
-      </div>
+      </div> */}
     </div>
   )
 }

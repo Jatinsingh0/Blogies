@@ -75,7 +75,9 @@ const Dashboard = () => {
   }
 
   if (session.status === "authenticated") {
-    return <div className={styles.container}>
+
+    return (
+    <div className={styles.container}>
       <div className={styles.posts}>
         {
            isLoading ? "Loading" : data?.map((post) => { 
@@ -101,7 +103,8 @@ const Dashboard = () => {
           ></textarea>
           <button className={styles.button}>Post</button>
         </form>
-    </div>;
+    </div>
+    );
   }
 };
 

@@ -15,7 +15,7 @@ const Contact = () => {
       <div className={styles.content}>
         <div className={styles.imgContainer}>
           <Image
-            src=""
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0k92-mUBuMT2g1c00PKCNuuWeCf1VIXCYseekQRKTUu437Uat6rEvP3qAHhUoNmH7mFk&usqp=CAU"
             alt=""
             fill={true}
             className={styles.image}

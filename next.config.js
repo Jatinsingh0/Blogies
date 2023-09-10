@@ -5,7 +5,8 @@ const nextConfig = {
         "educationinprogress.eu",
         "inspirationfeed.com",
         "ik.imagekit.io",
-        "encrypted-tbn0.gstatic.com"
+        "encrypted-tbn0.gstatic.com",
+        "www.google.com"
       ],
       },
 }

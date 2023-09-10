@@ -17,15 +17,15 @@ const Register = () => {
   
     try {
       const response = await fetch("/api/auth/register", {
-         method: "POST",
-         headers: {
+        method: "POST",
+        headers: {
           "content-type": "application/json",
-         },
-         body: JSON.stringify({
+        },
+        body: JSON.stringify({
           name,
           email,
           password,
-         }),
+        }),
       });
   
       if (response.status === 201) {
@@ -33,7 +33,7 @@ const Register = () => {
       }
     } catch (err) {
       setError(true);
-      console.error("Error occurred:", err);
+      console.error("error occured in register page", err);
     }
   };
   
