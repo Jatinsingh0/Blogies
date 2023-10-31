@@ -1,7 +1,8 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import styles from "./contact.module.css";
 import Image from "next/image";
-import Button from "../components/button/button";
 
 export const metadata = {
   title: "Contact Information",
@@ -9,6 +10,19 @@ export const metadata = {
 };
 
 const Contact = () => {
+
+  const[name, setName] = useState("")
+  const[email, setEmail] = useState("")
+  const[message, setMessage] = useState("")
+
+  const handelSubmit = (e) =>{
+    e.preventDefault();
+    setName("");
+    setEmail("");
+    setMessage("");
+  }
+
+   
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Let's Keep in Touch</h1>
@@ -21,16 +35,18 @@ const Contact = () => {
             className={styles.image}
           />
         </div>
-        <form className={styles.form}>
-          <input type="text" placeholder="name" className={styles.input} />
-          <input type="text" placeholder="email" className={styles.input} />
+        <form className={styles.form} onSubmit={handelSubmit}>
+          <input type="text" placeholder="name" className={styles.input} value={name} onChange={(e)=>setName(e.target.value)}/>
+          <input type="text" placeholder="email" className={styles.input} value={email} onChange={(e)=>setEmail(e.target.value)}/>
           <textarea
             className={styles.textArea}
             placeholder="message"
             cols="30"
             rows="10"
+            value={message}
+            onChange={(e)=>setMessage(e.target.value)}
           ></textarea>
-          <Button url="#" title="Send"/>
+          <button type="submit" className={styles.button}>submit</button>
         </form>
       </div>
     </div>
